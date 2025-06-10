@@ -1,7 +1,8 @@
+import LandingPage from "@/pages/LandingPage";
 import React from "react";
 
 const Home = () => {
-  return <div>Home</div>;
+  return <LandingPage />;
 };
 
 export default Home;
