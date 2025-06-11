@@ -1,14 +1,13 @@
-"use client";
-
-import React, { useState } from "react";
+import React, { FC } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "./FilterAndSort.module.css";
 
-const FilterAndSort = () => {
-  const [showFilter, setShowFilter] = useState(false);
+interface IFilterAndSort {
+  showFilter: boolean;
+  onToggleFilter: () => void;
+}
 
-  const handleToggleShowFilter = () => setShowFilter((prev) => !prev);
-
+const FilterAndSort: FC<IFilterAndSort> = ({ showFilter, onToggleFilter }) => {
   return (
     <section className={styles.container}>
       <div className={styles["mobile-view"]}>
@@ -22,12 +21,12 @@ const FilterAndSort = () => {
         <div className={styles["right-section"]}>
           <span>3425 ITEMS</span>
           {showFilter ? (
-            <button onClick={handleToggleShowFilter}>
+            <button onClick={onToggleFilter}>
               <ChevronRight />
               SHOW FILTER
             </button>
           ) : (
-            <button onClick={handleToggleShowFilter}>
+            <button onClick={onToggleFilter}>
               <ChevronLeft />
               HIDE FILTER
             </button>

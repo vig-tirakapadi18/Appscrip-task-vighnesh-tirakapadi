@@ -1,0 +1,18 @@
+.customizable {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.customizable input {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.filters {
+  margin-block: 1rem;
+  border-block: 1px solid lightgray;
+  padding: 1rem;
+}
