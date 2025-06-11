@@ -1,0 +1,33 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1rem;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  margin-block: 10px;
+}
+
+.hero-description {
+  margin-block: 10px;
+  line-height: 25px;
+}
+
+@media (min-width: 600px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    padding-inline: 20%;
+  }
+}

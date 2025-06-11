@@ -10,17 +10,17 @@ export const navItems = [
     href: "/skills",
   },
   {
-    id: 1,
+    id: 3,
     label: "Stories",
     href: "/stories",
   },
   {
-    id: 1,
+    id: 4,
     label: "About",
     href: "/about",
   },
   {
-    id: 1,
+    id: 5,
     label: "Contact Us",
     href: "/contact-us",
   },
