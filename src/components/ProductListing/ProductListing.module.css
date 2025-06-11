@@ -1,0 +1,19 @@
+.desktop-filters {
+  display: none;
+}
+
+.product-listing {
+  padding: 1rem;
+}
+
+@media (min-width: 600px) {
+  .product-listing {
+    display: flex;
+    padding: 2rem;
+  }
+
+  .desktop-filters {
+    display: block;
+    width: 30%;
+  }
+}

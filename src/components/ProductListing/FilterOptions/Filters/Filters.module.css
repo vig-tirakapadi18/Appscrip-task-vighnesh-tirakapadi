@@ -1,0 +1,39 @@
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid #dfdede;
+  padding-block: 1rem;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.unselect-button {
+  width: fit-content;
+  color: gray;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+.filter-sub-category {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

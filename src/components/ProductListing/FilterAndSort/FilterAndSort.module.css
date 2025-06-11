@@ -24,6 +24,7 @@
 
 .container button {
   padding: 2px 8px;
+  cursor: pointer;
 }
 
 .mobile-view {
