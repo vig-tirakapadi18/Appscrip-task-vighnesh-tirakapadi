@@ -6,6 +6,12 @@
   padding: 1rem;
 }
 
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
 @media (min-width: 600px) {
   .product-listing {
     display: flex;
@@ -15,5 +21,17 @@
   .desktop-filters {
     display: block;
     width: 30%;
+  }
+
+  @media (min-width: 600px) {
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .products {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
