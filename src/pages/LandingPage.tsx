@@ -1,10 +1,12 @@
-import OfferRibbon from "@/components/ui/OfferRibbon/OfferRibbon";
+import Navbar from "@/components/Navbar/Navbar";
+import OfferRibbon from "@/components/OfferRibbon/OfferRibbon";
 import React from "react";
 
 const LandingPage = () => {
   return (
     <div>
       <OfferRibbon />
+      <Navbar />
     </div>
   );
 };
