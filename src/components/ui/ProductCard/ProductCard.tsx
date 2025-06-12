@@ -32,9 +32,18 @@ const ProductCard: FC<IProductCardProps> = ({ title, image }) => {
       <div className={styles["card-title-section"]}>
         <span className={styles["card-title"]}>{title}</span>
         {!productToWishlist ? (
-          <HeartIcon size={16} onClick={toggleWishlist} />
+          <HeartIcon
+            size={16}
+            onClick={toggleWishlist}
+            className={styles.heart}
+          />
         ) : (
-          <Heart color="red" size={16} onClick={toggleWishlist} />
+          <Heart
+            color="red"
+            size={16}
+            onClick={toggleWishlist}
+            className={styles.heart}
+          />
         )}
       </div>
       <div className={styles["card-subtitle"]}>

@@ -30,11 +30,13 @@
   align-items: center;
   gap: 5px;
   justify-content: space-between;
+  margin-inline: 0.75rem;
 }
 
 .card-subtitle {
   font-size: 0.7rem;
   color: gray;
+  margin-inline: 0.75rem;
 }
 
 .card-link {
@@ -43,6 +45,10 @@
 
 .card-link:hover {
   color: #414141;
+}
+
+.heart {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
