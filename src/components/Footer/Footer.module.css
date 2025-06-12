@@ -1,0 +1,132 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subscribe-box h4,
+.contact-box h4 {
+  margin-bottom: 0.5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.subscribe-form button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.contact-box p {
+  margin: 0.25rem 0;
+}
+
+.currency-note {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 2rem 0;
+}
+
+.bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.follow-us {
+  display: flex;
+  gap: 5px;
+}
+
+.links-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.links-box h5 {
+  margin-bottom: 0.5rem;
+}
+
+.links-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-box .links {
+  display: flex;
+  margin-block: 0.5rem;
+  cursor: pointer;
+}
+
+.links-box .links:hover {
+  text-decoration: underline;
+}
+
+.social-and-payments {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.payment-methods img {
+  height: 50px;
+  margin-right: 0.5rem;
+}
+
+.social-icons > .follow-us > * {
+  border: 1px solid lightgray;
+  padding: 3px;
+  border-radius: 50%;
+  margin-block: 0.5rem;
+}
+
+.payment-methods img {
+  margin-top: 0.5rem;
+}
+
+.copyright {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: #888;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .top-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bottom-section {
+    flex-direction: row;
+  }
+
+  .social-and-payments {
+    align-items: flex-end;
+  }
+}
