@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { filters } from "@/lib/filters";
 import styles from "./Filters.module.css";
@@ -7,6 +9,17 @@ const Filters = () => {
   const [openFilterDropdownId, setOpenFilterDropdownId] = useState<
     null | string
   >(null);
+  const [selectedOptions, setSelectedOptions] = useState<
+    Record<string, string[]>
+  >({});
+
+  const handleUnselectAll = (filterId: string) => {
+    setSelectedOptions((prev) => {
+      const newState = { ...prev };
+      delete newState[filterId];
+      return newState;
+    });
+  };
 
   return (
     <div className={styles["filters-container"]}>
@@ -31,15 +44,42 @@ const Filters = () => {
 
           {openFilterDropdownId === filter.id && (
             <div className={styles["filter-dropdown"]}>
-              <button className={styles["unselect-button"]}>
-                Unselect all
-              </button>
+              <div className={styles["selection-buttons"]}>
+                <button
+                  className={styles["unselect-button"]}
+                  onClick={() => handleUnselectAll(filter.id)}
+                >
+                  Unselect all
+                </button>
+              </div>
               {filter.options.map((filterOption) => (
                 <label
                   key={filterOption.id}
                   className={styles["filter-sub-category"]}
                 >
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    checked={(selectedOptions[filter.id] || []).includes(
+                      filterOption.id
+                    )}
+                    onChange={() => {
+                      setSelectedOptions((prev) => {
+                        const currentSelected = prev[filter.id] || [];
+                        const newSelected = currentSelected.includes(
+                          filterOption.id
+                        )
+                          ? currentSelected.filter(
+                              (id) => id !== filterOption.id
+                            )
+                          : [...currentSelected, filterOption.id];
+
+                        return {
+                          ...prev,
+                          [filter.id]: newSelected,
+                        };
+                      });
+                    }}
+                  />
                   {filterOption.label}
                 </label>
               ))}
